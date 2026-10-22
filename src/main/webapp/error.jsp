@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lỗi - Sổ Ghi Chú</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=3">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=4">
 </head>
 <body>
     <div class="container error-container">

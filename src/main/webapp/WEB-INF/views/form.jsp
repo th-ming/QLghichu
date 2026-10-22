@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><c:choose><c:when test="${note != null && note.id > 0}">✏️ Sửa Ghi Chú</c:when><c:otherwise>➕ Tạo Ghi Chú Mới</c:otherwise></c:choose></title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=3">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css?v=4">
 </head>
 <body>
     <div class="container form-container">
