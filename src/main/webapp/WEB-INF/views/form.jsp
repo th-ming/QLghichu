@@ -51,8 +51,6 @@
         </form>
     </div>
 
-    <footer class="site-footer">— Sổ Ghi Chú · JSP/Servlet + MySQL —</footer>
-
     <script src="${pageContext.request.contextPath}/js/main.js"></script>
 </body>
 </html>
