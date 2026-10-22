@@ -14,7 +14,6 @@ public class UTF8Filter implements Filter {
             throws IOException, ServletException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html; charset=UTF-8");
 
         if (response instanceof HttpServletResponse) {
             ((HttpServletResponse) response).setHeader("X-Content-Type-Options", "nosniff");
