@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><c:choose><c:when test="${note != null && note.id > 0}">✏️ Sửa Ghi Chú</c:when><c:otherwise>➕ Tạo Ghi Chú Mới</c:otherwise></c:choose></title>
+    <title><c:choose><c:when test="${note != null && note.id > 0}">Sửa ghi chú</c:when><c:otherwise>Tạo ghi chú mới</c:otherwise></c:choose></title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
     <div class="container form-container">
         <header class="header">
-            <h1><c:choose><c:when test="${note != null && note.id > 0}">✏️ Sửa Ghi Chú</c:when><c:otherwise>➕ Tạo Ghi Chú Mới</c:otherwise></c:choose></h1>
+            <h1><c:choose><c:when test="${note != null && note.id > 0}">Sửa ghi chú</c:when><c:otherwise>Tạo ghi chú mới</c:otherwise></c:choose></h1>
             <a href="${pageContext.request.contextPath}/notes/" class="btn btn-secondary">← Quay lại</a>
         </header>
 
@@ -42,8 +42,8 @@
             <div class="form-actions">
                 <button type="submit" class="btn btn-primary">
                     <c:choose>
-                        <c:when test="${note != null && note.id > 0}">💾 Cập Nhật</c:when>
-                        <c:otherwise>💾 Lưu Ghi Chú</c:otherwise>
+                        <c:when test="${note != null && note.id > 0}">Cập nhật</c:when>
+                        <c:otherwise>Lưu ghi chú</c:otherwise>
                     </c:choose>
                 </button>
                 <a href="${pageContext.request.contextPath}/notes/" class="btn btn-secondary">Hủy</a>

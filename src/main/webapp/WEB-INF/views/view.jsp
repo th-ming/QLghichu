@@ -14,16 +14,16 @@
         <header class="header">
             <h1><c:out value="${note.title}"/></h1>
             <div class="header-actions">
-                <a href="${pageContext.request.contextPath}/notes/edit?id=${note.id}" class="btn btn-primary">✏️ Chỉnh sửa</a>
+                <a href="${pageContext.request.contextPath}/notes/edit?id=${note.id}" class="btn btn-primary">Chỉnh sửa</a>
                 <a href="${pageContext.request.contextPath}/notes/" class="btn btn-secondary">← Quay lại danh sách</a>
             </div>
         </header>
 
         <article class="note-detail">
             <div class="note-meta">
-                <span>📅 Tạo: <fmt:formatDate value="${note.createdAt}" pattern="dd/MM/yyyy HH:mm" /></span>
+                <span>Tạo <fmt:formatDate value="${note.createdAt}" pattern="dd/MM/yyyy HH:mm" /></span>
                 <c:if test="${note.updatedAt != null && note.updatedAt != note.createdAt}">
-                    <span>🔄 Cập nhật lần cuối: <fmt:formatDate value="${note.updatedAt}" pattern="dd/MM/yyyy HH:mm" /></span>
+                    <span>Sửa lần cuối <fmt:formatDate value="${note.updatedAt}" pattern="dd/MM/yyyy HH:mm" /></span>
                 </c:if>
             </div>
 
@@ -33,7 +33,7 @@
         </article>
 
         <footer class="note-footer">
-            <a href="${pageContext.request.contextPath}/notes/delete?id=${note.id}" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa ghi chú này?')">🗑 Xóa ghi chú này</a>
+            <a href="${pageContext.request.contextPath}/notes/delete?id=${note.id}" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa ghi chú này?')">Xóa ghi chú này</a>
         </footer>
     </div>
 
