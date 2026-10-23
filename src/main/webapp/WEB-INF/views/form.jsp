@@ -51,6 +51,6 @@
         </form>
     </div>
 
-    <script src="${pageContext.request.contextPath}/js/main.js"></script>
+    <script src="${pageContext.request.contextPath}/js/main.js?v=2"></script>
 </body>
 </html>
