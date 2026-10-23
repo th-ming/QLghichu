@@ -1,7 +1,7 @@
-// NoteManager - Client-side JavaScript
+// NoteManager - JavaScript phía khách (client)
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Character counter for textarea
+    // Bộ đếm ký tự cho ô nội dung
     const contentTextarea = document.getElementById('content');
     const charCount = document.getElementById('charCount');
 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCharCount();
     }
 
-    // Auto-dismiss alerts after 5 seconds
+    // Tự ẩn thông báo sau 5 giây
     const alerts = document.querySelectorAll('.alert');
     alerts.forEach(alert => {
         setTimeout(() => {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     });
 
-    // Confirm delete with sweet confirmation
+    // Xác nhận trước khi xóa
     const deleteLinks = document.querySelectorAll('.btn-delete, .btn-danger');
     deleteLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form validation
+    // Kiểm tra dữ liệu form
     const noteForm = document.getElementById('noteForm');
     if (noteForm) {
         noteForm.addEventListener('submit', function(e) {
@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Keyboard shortcuts
+    // Phím tắt bàn phím
     document.addEventListener('keydown', function(e) {
-        // Ctrl/Cmd + Enter to submit form
+        // Ctrl/Cmd + Enter để lưu form
         if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
             const form = document.getElementById('noteForm');
             if (form) {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        // Escape to go back
+        // Escape để quay lại trang trước
         if (e.key === 'Escape') {
             const backLink = document.querySelector('.btn-secondary');
             if (backLink) {
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Smooth scroll for anchor links
+    // Cuộn mượt cho link neo (#)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -110,9 +110,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Utility functions
+// Các hàm tiện ích
 const NoteManager = {
-    // Format date for display
+    // Định dạng ngày giờ hiển thị
     formatDate: function(date) {
         return new Intl.DateTimeFormat('vi-VN', {
             day: '2-digit',
@@ -123,13 +123,13 @@ const NoteManager = {
         }).format(date);
     },
 
-    // Truncate text
+    // Cắt bớt văn bản quá dài
     truncate: function(text, length) {
         if (text.length <= length) return text;
         return text.substring(0, length) + '...';
     },
 
-    // Show toast notification
+    // Hiện thông báo toast
     showToast: function(message, type = 'info') {
         const toast = document.createElement('div');
         toast.className = `toast toast-${type}`;
@@ -163,7 +163,7 @@ const NoteManager = {
     }
 };
 
-// Add toast animations
+// Thêm hiệu ứng chuyển động cho toast
 const style = document.createElement('style');
 style.textContent = `
     @keyframes slideIn {
