@@ -1,4 +1,4 @@
--- NoteManager Database Setup
+-- QLghichu Database Setup
 -- Chạy script này trong MySQL để tạo database và bảng
 
 CREATE DATABASE IF NOT EXISTS notemanager

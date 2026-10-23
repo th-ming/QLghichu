@@ -1,4 +1,4 @@
-// NoteManager - JavaScript phía khách (client)
+// QLghichu - JavaScript phía khách (client)
 
 document.addEventListener('DOMContentLoaded', function() {
     // Bộ đếm ký tự cho ô nội dung
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Các hàm tiện ích
-const NoteManager = {
+const QLghichu = {
     // Định dạng ngày giờ hiển thị
     formatDate: function(date) {
         return new Intl.DateTimeFormat('vi-VN', {
